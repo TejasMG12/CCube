@@ -1,0 +1,173 @@
+/* TODO: Import Google Font - Poppins */
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*TODO: add google Poppins font here */
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  /* TODO: set all contents to appear in the center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* TODO: add background image here from public folder and add a appropriate backgroud-size */
+}
+.container{
+  max-width: 730px;
+  width: 100%;
+  padding: 30px;
+  background: rgb(243, 228, 165);
+  /* Todo: add css for rounded edges   */
+  border-radius: 10px;
+  opacity: 0.85;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.01);
+}
+.wrapper{
+  border-radius: 5px;
+  border: 1px solid #f39494;
+}
+.wrapper .text-input{
+  display: flex;
+  border-bottom: 1px solid #f39494;
+}
+.text-input .to-text{
+  border-radius: 0px;
+  border-left: 1px solid #f39494;
+}
+.text-input textarea{
+  height: 280px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: none;
+  font-size: 18px;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.text-input textarea::placeholder{
+  color: #de3838;
+}
+.controls, li, .icons, .icons i{
+
+  /*TODO: fix display issues and alignments  */
+  display: flex;
+  align-items: center;
+  width: 480px;
+  height: 45px;
+}
+.controls{
+  list-style: none;
+  padding: 10px 13px;
+}
+.controls .row .icons{
+  width: 28%;
+}
+.controls .row .icons i{
+  width: 50px;
+  color: #adadad;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  justify-content: center;
+}
+.controls .row.from .icons{
+  padding-right: 15px;
+  border-right: 1px solid #ccc;
+}
+.controls .row.to .icons{
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+.controls .row select{
+  color: #333;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+  padding-left: 5px;
+}
+.text-input textarea::-webkit-scrollbar{
+  width: 4px;
+}
+.controls .row select::-webkit-scrollbar{
+  width: 8px;
+}
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track{
+  background: #fff;
+}
+.text-input textarea::-webkit-scrollbar-thumb{
+  background: #ddd;
+  border-radius: 8px;
+}
+.controls .row select::-webkit-scrollbar-thumb{
+  background: #999;
+  border-radius: 8px;
+  border-right: 2px solid #f7f48e;
+}
+.controls .exchange{
+  color: #adadad;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: center;
+  transition: transform 0.2s ease;
+}
+.controls i:active{
+  transform: scale(0.9);
+}
+
+/* TODO: add css for translate button */
+button{
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 50px;
+  width: inherit;
+  padding: 5px 250px;
+  background-color: #d28f2a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #6f4516;
+}
+
+@media (max-width: 660px){
+  .container{
+    padding: 20px;
+  }
+  .wrapper .text-input{
+    flex-direction: column;
+  }
+  .text-input .to-text{
+    border-left: 0px;
+    border-top: 1px solid #ccc;
+  }
+  .text-input textarea{
+    height: 200px;
+  }
+  .controls .row .icons{
+    display: flex;
+  }
+  .container button{
+    padding: 13px;
+    font-size: 16px;
+  }
+  .controls .row select{
+    font-size: 16px;
+  }
+  .controls .exchange{
+    font-size: 14px;
+  }
+}
